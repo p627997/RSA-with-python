@@ -4,7 +4,7 @@ import rsa
 publickey, privatekey = rsa.newkeys(2048)
 
 # Plain or Original text
-plaintext = "Test"
+plaintext = "Secret"
 
 # Encrypt the message using the public key
 def encrypt(plaintext):
@@ -16,6 +16,6 @@ def decrypt(ciphertext):
     decrypted_text = rsa.decrypt(ciphertext, privatekey).decode()
     return decrypted_text
 
-print("Original Text: ", plaintext) # It original text - "Test"
+print("Original Text: ", plaintext) # It original text - "Secret"
 print("Encrypted Text: ", encrypt(plaintext)) # It will return byte object
-print("Decrypted Text: ", decrypt(encrypt(plaintext))) # It will return original text - "Test"
+print("Decrypted Text: ", decrypt(encrypt(plaintext))) # It will return original text - "Secret"
