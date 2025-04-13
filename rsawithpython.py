@@ -1,7 +1,7 @@
 import rsa
 
 # Generate public and private keys
-publickey, privatekey = rs.newkeys(2048)
+publickey, privatekey = rsa.newkeys(2048)
 
 # Plain or Original text
 plaintext = "Secret"
